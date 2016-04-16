@@ -1,0 +1,14 @@
+{
+	"name": "ugs_static_files_service",
+	"version": "1.1.0",
+	"description": "Provides static files service for UAV Ground Station",
+	"author": "Huang Yixin<Huang_Yixin@hotmail.com>",
+	"main": "app.js",
+	"script": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "^4.0.0",
+		"ejs": "$2.0.0"
+	}
+}

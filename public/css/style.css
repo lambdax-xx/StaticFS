@@ -1,0 +1,91 @@
+
+@media screen and (orientation:landscape) {
+	body {
+		margin: 0;
+		padding: 5;
+	}
+
+	div.disdv {
+		position: fixed;
+		left: 0;
+		right: 30%;
+		top: 0;
+		bottom: 0;
+		overflow: auto;
+		background-color: gray;
+	}
+
+	div.lstdv {
+		position: fixed;
+		left: 70%;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		overflow: auto;
+	}
+
+	div.tip {
+		left: 0%;
+	    top: 50%;
+	    right: 0%;
+	    bottom: 50%;
+	    position: absolute;
+	    text-align: center;
+	}
+
+	video {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		min-width: 320px;
+		min-height: 240px;
+	}
+}
+
+
+@media screen and (orientation:portrait) {
+	body {
+		margin: 0;
+		padding: 5;
+	}
+
+	div.disdv {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 70%;
+		overflow: auto;
+		background-color: gray;
+	}
+
+	div.lstdv {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 30%;
+		bottom: 0;
+		overflow: auto;
+	}
+
+	div.tip {
+		left: 0%;
+	    top: 50%;
+	    right: 0%;
+	    bottom: 50%;
+	    position: absolute;
+	    text-align: center;
+	}
+
+	video {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		min-width: 320px;
+		min-height: 240px;
+	}
+}

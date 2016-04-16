@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/css/style.css">
+	<script>
+		function cdv(f, t) {
+			switch (t) {
+				case 'video':
+					dv.innerHTML = '<video src="/staticFS/' + f + '" controls="controls"></video>';
+					break;
+				case 'image':
+					dv.innerHTML = '<img src="/staticFS/' + f + '"/>';
+					break;
+				case 'text':
+					dv.innerHTML = '<iframe scr="/staticFS/' + f + '"/>';
+					break;
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="dv" class="disdv">
+		<div class="tip"> Please chooice a file to play! </div>
+	</div>
+	<div class="lstdv">
+		<% function mklst(fs) { %>
+			<% if (fs.dir.length !== 0) { %>
+				<li> <%= fs.dir %> </li>
+			<% } %>
+			<ul>
+			<% for (var i = 0; i < fs.length; i++) {
+					if (Array.isArray(fs[i])) { 
+						mklst(fs[i]);
+					} else { 
+						var f = fs[i]; 
+						var t = locals.ft(f); %>
+						<li> <a href="javascript:cdv('<%= fs.dir + f %>', '<%= t %>'),void(0)"><%= f %></a></li>
+					<% } 
+				} %>
+			</ul>
+		<% } %>
+		<% mklst(fs) %>
+	<div>
+</body>
+</html>
